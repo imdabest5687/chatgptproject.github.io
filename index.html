@@ -2,37 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MySite</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Modern Site</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <script defer src="https://kit.fontawesome.com/yourkitid.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- HEADER / NAV -->
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="header__logo">MySite</a>
-
-      <!-- Mobile nav toggle -->
-      <input type="checkbox" id="nav-toggle" class="header__toggle">
-      <label for="nav-toggle" class="header__toggle-label">
-        <span></span>
-      </label>
-
-      <nav class="header__nav">
+      <a href="#" class="logo">MyModernSite</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero__content">
-        <h1 class="hero__title">ChatGptProject</h1>
-        <p class="hero__subtitle">An elegant, responsive, and modern static site
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1>Welcome to <span class="highlight">MyModernSite</span></h1>
+      <p>Your one-stop solution for sleek, responsive, and beautiful static websites.</p>
+      <a href="#services" class="btn btn--primary">Our Services</a>
+      <a href="#contact" class="btn btn--secondary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">What We Offer</h2>
+      <div class="services__grid">
+        <div class="card service-card">
+          <i class="fas fa-laptop-code card__icon"></i>
+          <h3>Web Development</h3>
+          <p>Crafting fast, accessible, and maintainable websites with modern technologies.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fas fa-paint-brush card__icon"></i>
+          <h3>UI/UX Design</h3>
+          <p>Clean interfaces and delightful experiences, designed for your users.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fas fa-chart-line card__icon"></i>
+          <h3>SEO & Analytics</h3>
+          <p>Optimize your site to
