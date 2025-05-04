@@ -1,11 +1,67 @@
-<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
-<script>
-  async function main(){
-    let py = await loadPyodide();
-    py.runPython(`
-      from js import console
-      console.log("Hello from Python in the browser!")
-    `);
-  }
-  main();
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pyodide Demo</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+<body>
+  <h1>Pyodide Inline Demo</h1>
+  
+  <!-- 1. Write your Python here: -->
+  <script type="text/python" id="py-inline">
+from art import logo
+
+def add(n1, n2):
+    return n1 + n2
+
+def subtract(n1, n2):
+    return n1 - n2
+
+def multiply(n1, n2):
+    return n1 * n2
+
+def divide(n1, n2):
+    return n1 / n2
+
+op = {"+": add,
+      "-": subtract,
+      "*": multiply,
+      "/": divide
+}
+def calculator():
+    print(logo)
+    user_still_calculating = True
+    num1 = float(input("What's the first number?: "))
+    while user_still_calculating:
+        for symbol in op:
+            print(symbol)
+        sym = (input("Pick an operation from the line above: "))
+        num2 = float(input("What's the second number?: "))
+        calc = op[sym]
+        answer = calc(num1, num2)
+        
+        print(f"{num1} {sym} {num2} = {answer}")
+        y_n = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ").lower()
+        if y_n == "y":
+            num1 = answer
+        else:
+            user_still_calculating = False
+            calculator()
+calculator()
+  </script>
+
+  <script>
+    async function main() {
+      // 2. Load the Pyodide runtime
+      let pyodide = await loadPyodide();
+      // 3. Grab your inline script’s contents
+      let code = document.getElementById("py-inline").textContent;
+      // 4. Run it!
+      pyodide.runPython(code);
+    }
+    main();
+  </script>
+</body>
+</html>
