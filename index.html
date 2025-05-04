@@ -21,18 +21,6 @@
 </head>
 <body>
 
-  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
-<script>
-  async function main(){
-    let py = await loadPyodide();
-    py.runPython(`
-      from js import console
-      console.log("Hello from Python in the browser!")
-    `);
-  }
-  main();
-</script>
-
 
   <!-- HEADER / NAV -->
   <header class="header">
