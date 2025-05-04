@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>My Modern Site</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <script defer src="https://kit.fontawesome.com/yourkitid.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pZzka5FybMnp5EAAsN3CeXkk0sxn819/SojpaPZoCC170Z5+odaFGX+w9SxFZZ5HtufTfJDmT+Zp4CbTsroB9w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,18 +24,20 @@
   <!-- HEADER / NAV -->
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="logo">MyModernSite</a>
+      <a href="index.html" class="logo">MyModernSite</a>
+
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -38,8 +49,8 @@
     <div class="container hero__content">
       <h1>Welcome to <span class="highlight">MyModernSite</span></h1>
       <p>Your one-stop solution for sleek, responsive, and beautiful static websites.</p>
-      <a href="#services" class="btn btn--primary">Our Services</a>
-      <a href="#contact" class="btn btn--secondary">Get in Touch</a>
+      <a href="services.html" class="btn btn--primary">Our Services</a>
+      <a href="contact.html" class="btn btn--secondary">Get in Touch</a>
     </div>
   </section>
 
@@ -61,4 +72,190 @@
         <div class="card service-card">
           <i class="fas fa-chart-line card__icon"></i>
           <h3>SEO & Analytics</h3>
-          <p>Optimize your site to
+          <p>Optimize your site to rank higher, and track real-time performance.</p>
+        </div>
+        <div class="card service-card">
+          <i class="fas fa-headset card__icon"></i>
+          <h3>Support & Maintenance</h3>
+          <p>Reliable ongoing support, updates, and monitoring so you never miss a beat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section-title">Recent Projects</h2>
+      <div class="portfolio__grid">
+        <div class="card portfolio-card">
+          <a href="https://github.com/yourusername/project-one" target="_blank" rel="noopener">
+            <img src="https://source.unsplash.com/400x300/?website" alt="Project 1">
+            <div class="portfolio-card__content">
+              <h3>Project One</h3>
+              <p>An e-commerce platform with seamless checkout flow and custom CMS.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card portfolio-card">
+          <a href="https://github.com/yourusername/project-two" target="_blank" rel="noopener">
+            <img src="https://source.unsplash.com/400x300/?app" alt="Project 2">
+            <div class="portfolio-card__content">
+              <h3>Project Two</h3>
+              <p>A mobile-first web app with offline support and push notifications.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card portfolio-card">
+          <a href="https://github.com/yourusername/project-three" target="_blank" rel="noopener">
+            <img src="https://source.unsplash.com/400x300/?dashboard" alt="Project 3">
+            <div class="portfolio-card__content">
+              <h3>Project Three</h3>
+              <p>Data visualization dashboard for real-time analytics and insights.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <h2 class="section-title">About Us</h2>
+        <p>At MyModernSite, we believe that your online presence should be as unique as your brand. Our team of designers, developers, and strategists work together to deliver sites that not only look great but also perform flawlessly across devices.</p>
+        <p>Founded in 2022, we’ve helped over 50 clients launch successful web projects—ranging from personal portfolios to enterprise platforms.</p>
+      </div>
+      <div class="about__image">
+        <img src="https://source.unsplash.com/600x400/?team,office" alt="About our team">
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="team">
+    <div class="container">
+      <h2 class="section-title">Meet the Team</h2>
+      <div class="team__grid">
+        <div class="card team-card">
+          <img src="https://source.unsplash.com/200x200/?woman" alt="Alice Smith">
+          <h3>Alice Smith</h3>
+          <p>Lead Developer</p>
+        </div>
+        <div class="card team-card">
+          <img src="https://source.unsplash.com/200x200/?man" alt="Bob Johnson">
+          <h3>Bob Johnson</h3>
+          <p>UI/UX Designer</p>
+        </div>
+        <div class="card team-card">
+          <img src="https://source.unsplash.com/200x200/?person" alt="Charlie Lee">
+          <h3>Charlie Lee</h3>
+          <p>SEO Specialist</p>
+        </div>
+        <div class="card team-card">
+          <img src="https://source.unsplash.com/200x200/?woman-1" alt="Dana Davis">
+          <h3>Dana Davis</h3>
+          <p>Project Manager</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2 class="section-title">From Our Blog</h2>
+      <div class="blog__grid">
+        <article class="card blog-card">
+          <img src="https://source.unsplash.com/400x250/?code" alt="Blog 1">
+          <h3>5 Tips for Faster Page Loads</h3>
+          <p>Learn simple techniques to make your site load in under 2 seconds.</p>
+          <a href="https://web.dev/fast/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+        </article>
+        <article class="card blog-card">
+          <img src="https://source.unsplash.com/400x250/?design" alt="Blog 2">
+          <h3>Choosing the Right Color Palette</h3>
+          <p>How to pick colors that resonate with your brand and audience.</p>
+          <a href="https://www.canva.com/learn/how-to-choose-colors/" target="_blank" rel="noopener" class="read-more">Read more →</a>
+        </article>
+        <article class="card blog-card">
+          <img src="https://source.unsplash.com/400x250/?analytics" alt="Blog 3">
+          <h3>SEO in 2025: What’s Changed?</h3>
+          <p>An overview of the latest search-engine guidelines and best practices.</p>
+          <a href="https://moz.com/blog/seo-tactics-to-focus-on" target="_blank" rel="noopener" class="read-more">Read more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <h2>Stay Updated</h2>
+      <p>Join our newsletter to get the latest tips, tutorials, and news delivered to your inbox.</p>
+      <form
+        class="newsletter__form"
+        action="https://formspree.io/f/mgebpkeq"
+        method="POST"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email address"
+          required
+        >
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container contact__inner">
+      <div class="contact__info">
+        <h2 class="section-title">Get in Touch</h2>
+        <p>
+          <i class="fas fa-map-marker-alt"></i>
+          <a
+            href="https://goo.gl/maps/ZXu1nQg1LbL2"
+            target="_blank"
+            rel="noopener"
+          >1234 Main St, Anytown, USA</a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+11234567890">(123) 456-7890</a>
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:hello@mymodernsite.com">hello@mymodernsite.com</a>
+        </p>
+      </div>
+      <form
+        class="contact__form"
+        action="https://formspree.io/f/xyyzz"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="4" placeholder="Message" required></textarea>
+        <button type="submit" class="btn btn--secondary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>
+        © 2025 MyModernSite • Follow us:
+        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
